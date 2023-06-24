@@ -8,6 +8,9 @@ packages = [{include = "linkedin_chat"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+linkedin-api = {git = "https://github.com/tomquirk/linkedin-api.git"}
+streamlit = "^1.23.1"
+streamlit-chat = "^0.1.0"
 
 
 [build-system]
