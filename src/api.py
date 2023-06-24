@@ -6,7 +6,7 @@ email = st.secrets.LD_USERNAME
 password = st.secrets.LD_PASSWORD
 me = st.secrets.ME
 
-api = Linkedin(email, password, refresh_cookies=True)
+api = Linkedin(email, password, refresh_cookies=False)
 
 
 def get_messages(member_id: str) -> list[Message]:
