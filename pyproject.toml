@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "linkedin-chat"
+version = "0.1.0"
+description = ""
+authors = ["Dmitry Bleschunov <bleshunov5b@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "linkedin_chat"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
