@@ -24,3 +24,12 @@ def get_messages(member_id: str) -> list[Message]:
         messages.append(Message(content, me == _from))
 
     return messages
+
+
+def get_profile_url(member_id: str) -> str:
+    profile = api.get_profile(member_id)
+    return f"https://linkedin.com/in/{profile['public_id']}"
+
+
+def send_message(message, member_id: str) -> None:
+    api.send_message(message, recipients=[member_id])
