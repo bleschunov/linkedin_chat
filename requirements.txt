@@ -1,0 +1,3 @@
+linkedin-api
+streamlit
+streamlit-chat
