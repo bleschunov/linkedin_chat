@@ -12,7 +12,7 @@ def print_messages():
 
 if "msg_list" not in st.session_state:
     query_params = st.experimental_get_query_params()
-    conv_id = query_params["conv_id"][0]
+    conv_id = query_params["member_id"][0]
     st.session_state.msg_list = get_messages(conv_id)
 
 
