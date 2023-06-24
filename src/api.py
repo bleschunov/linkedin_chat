@@ -20,8 +20,11 @@ def get_messages(member_id: str) -> list[Message]:
 
     for elem in conv["elements"]:
         content = elem["eventContent"]["com.linkedin.voyager.messaging.event.MessageEvent"]["attributedBody"]["text"]
-        _from = elem["from"]["com.linkedin.voyager.messaging.MessagingMember"]["miniProfile"]["objectUrn"]
-        messages.append(Message(content, me == _from))
+        _from_obj = elem["from"]["com.linkedin.voyager.messaging.MessagingMember"]["miniProfile"]
+        _from = _from_obj["objectUrn"]
+        avatar_obj = _from_obj["picture"]["com.linkedin.common.VectorImage"]
+        avatar = avatar_obj["rootUrl"] + avatar_obj["artifacts"][0]["fileIdentifyingUrlPathSegment"]
+        messages.append(Message(content, me == _from, avatar))
 
     return messages
 

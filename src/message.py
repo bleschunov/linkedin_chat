@@ -5,3 +5,4 @@ from dataclasses import dataclass
 class Message:
     text: str
     is_me: bool
+    avatar: str
