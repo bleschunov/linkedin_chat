@@ -1,3 +1,4 @@
 linkedin-api
 streamlit
 streamlit-chat
+gspread
